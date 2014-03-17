@@ -61,7 +61,7 @@ DATABASES = {
         'NAME': 'myproject',
         'HOST': 'localhost',
         'PORT': 3306,
-        'USER': 'enjoy', # you should change this
+        'USER': 'root', # you should change this
         'PASSWORD': '1234qwer', # and also this
     }
 }
