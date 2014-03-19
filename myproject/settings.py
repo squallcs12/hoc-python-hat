@@ -47,12 +47,17 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
 )
 
 ROOT_URLCONF = 'myproject.urls'
 
 WSGI_APPLICATION = 'myproject.wsgi.application'
 
+# Locale and translation
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'conf', 'locale'), # which is ~/myproject/conf/locale
+)
 
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
