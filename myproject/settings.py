@@ -36,8 +36,9 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'polls', # remember to put comma
+    'polls',  # remember to put comma
     'south',
+    'lettuce.django',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -56,7 +57,7 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 
 # Locale and translation
 LOCALE_PATHS = (
-    os.path.join(BASE_DIR, 'conf', 'locale'), # which is ~/myproject/conf/locale
+    os.path.join(BASE_DIR, 'conf', 'locale'),  # which is ~/myproject/conf/locale
 )
 
 # Database
@@ -68,8 +69,8 @@ DATABASES = {
         'NAME': 'myproject',
         'HOST': 'localhost',
         'PORT': 3306,
-        'USER': 'root', # you should change this
-        'PASSWORD': '1234qwer', # and also this
+        'USER': 'root',  # you should change this
+        'PASSWORD': '1234qwer',  # and also this
     }
 }
 
@@ -94,6 +95,6 @@ TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 
 STATIC_URL = '/static/'
 try:
-    from local_settings import * # override current settings with a local settings
-except ImportError: # in case this file was not created
-    pass # ignore the exception
+    from local_settings import *  # override current settings with a local settings
+except ImportError:  # in case this file was not created
+    pass  # ignore the exception
